@@ -92,9 +92,10 @@ export function Hero() {
         <Image
           src="http://arweave.net/Pl_SeL00Zs0WBVqCtjOiMjaLMqb1g8f-XckEalFp2g4"
           alt="Profile Image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }} // Use CSS instead
         />
+
       </motion.div>
     </motion.div>
   );
