@@ -1,10 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Check } from "lucide-react";
 
 export function Hero() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleEmailCopy = () => {
+    navigator.clipboard.writeText("jordynhay05@gmail.com");
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000); // Reset after 2 seconds
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -45,7 +54,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
         >
-        Health, Family & Friends. And above all - Purpose…
+          Health, Family & Friends. And above all - Purpose…
         </motion.p>
         
         <motion.div
@@ -54,13 +63,17 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex justify-center md:justify-start gap-6 pt-4"
         >
-          <a
-            href="mailto:jordynhay05@gmail.com"
+          {/* Email Copy Functionality */}
+          <button
+            onClick={handleEmailCopy}
             className="hover:opacity-70 flex items-center gap-2"
           >
             <Mail size={20} />
-            <span>Email</span>
-          </a>
+            <span>{emailCopied ? "Email Copied!" : "Email"}</span>
+            {emailCopied && <Check size={16} className="text-green-500" />}
+          </button>
+
+          {/* Location */}
           <div className="flex items-center gap-2">
             <MapPin size={20} />
             <span>Philippines</span>
