@@ -58,7 +58,7 @@ export function Footer() {
             >
               <SiGmail size={24} />
             </a>
-            <a href="/Jordyn's_Resume.pdf" download className="hover:opacity-70">
+            <a href="arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU" download className="hover:opacity-70">
               <FaPaperclip size={24} />
             </a>
           </motion.div>
