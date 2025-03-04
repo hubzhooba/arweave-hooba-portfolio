@@ -58,23 +58,28 @@ export function Footer() {
             >
               <SiGmail size={24} />
             </a>
-            <a href="http://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU" download className="hover:opacity-70">
+            {/* Resume link now opens in a new tab */}
+            <a 
+              href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU?ext=pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70"
+            >
               <FaPaperclip size={24} />
             </a>
           </motion.div>
+
           <motion.div
             className="pt-16 text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-          <p>
-          </p>
             <p>&copy; {new Date().getFullYear()} Jordyn. All rights reserved.</p>
             <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
-          This website is <strong>fully deployed on the blockchain</strong>, with all
-          assets permanently stored on <strong>decentralized cloud storage</strong>.
-          </p>
+              This website is <strong>fully deployed on the blockchain</strong>, with all
+              assets permanently stored on <strong>decentralized cloud storage</strong>.
+            </p>
           </motion.div>
         </motion.div>
       </div>
