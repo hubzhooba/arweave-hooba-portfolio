@@ -11,7 +11,7 @@ export function Hero() {
   const handleEmailCopy = () => {
     navigator.clipboard.writeText("jordynhay05@gmail.com");
     setEmailCopied(true);
-    setTimeout(() => setEmailCopied(false), 2000); // Reset after 2 seconds
+    setTimeout(() => setEmailCopied(false), 1000); // Reset after 2 seconds
   };
 
   return (
