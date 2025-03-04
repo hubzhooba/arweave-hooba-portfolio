@@ -1,4 +1,3 @@
-// layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -23,12 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link
-          rel="icon"
-          href="http://arweave.net/hssE2Z_g0G8XRH2PhfLvnCLdj1sW-2RPP-nqFrApRJA"
-          type="image/png"
-        />
-        <link rel="shortcut icon" href="http://arweave.net/hssE2Z_g0G8XRH2PhfLvnCLdj1sW-2RPP-nqFrApRJA" />
+    
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
