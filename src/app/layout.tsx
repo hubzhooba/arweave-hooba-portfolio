@@ -7,15 +7,13 @@ import { Navigation } from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// ✅ Correct metadata for Next.js 13+
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: "http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s",
+    icon: "http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s", 
   },
 };
 
-// ✅ Correctly structured Server Component
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <head>
+        <link rel="icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s" type="image/png" />
+        <link rel="shortcut icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s" />
+      </head>
+      <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <Navigation />
           <div className="mx-auto max-w-[1170px] px-4 md:px-6 lg:px-8">
