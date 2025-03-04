@@ -45,7 +45,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
         >
-          I'm Jordyn! A Software Engineer building in web3.
+        Health, Family & Friends. And above all - Purpose…
         </motion.p>
         
         <motion.div

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaXTwitter, FaLinkedin, FaDownload, FaPaperclip } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedin, FaPaperclip } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import { handleEmailClick } from "@/lib/utils";
