@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { FaXTwitter, FaYoutube, FaDiscord } from "react-icons/fa6";
-import { handleEmailClick } from "@/lib/utils";
+import Image from "next/image";
+import { Mail, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
@@ -13,106 +11,76 @@ export function Hero() {
       whileInView={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-[80vh] px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8"
+      className="min-h-[60vh] px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-6 max-w-5xl mx-auto"
     >
+      {/* Left Side - Text */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
-        className="flex-1 space-y-6"
+        className="flex-1 space-y-6 text-center md:text-left"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight"
+          className="text-lg uppercase tracking-wide text-gray-500"
         >
-          Rohit
+          HOOBA
         </motion.h1>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl md:text-4xl text-muted-foreground font-bold tracking-tight"
+          className="text-3xl md:text-5xl font-bold tracking-tight"
         >
-          Learn · Innovate · Collaborate
+          Building · Cool · Sh*t
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-xl text-muted-foreground max-w-[600px]"
+          className="text-lg text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
         >
-          Hey, I&apos;m Rohit! I create educational content and tools that make
-          it super easy for anyone to learn new technical concepts. Currently,
-          I&apos;m building in the Arweave ecosystem with this simple idea 👇
+          I'm Jordyn! A Software Engineer building in web3.
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl font-semibold italic"
-        >
-          &quot;Come for the tech, stay for the vibes.&quot;
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <Button size="lg" className="mt-4" asChild>
-            <a href="#" onClick={handleEmailClick}>
-              Get in touch
-            </a>
-          </Button>
-        </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex gap-4 pt-4"
+          className="flex justify-center md:justify-start gap-6 pt-4"
         >
           <a
-            href="https://x.com/ropats16"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-70"
+            href="mailto:jordynhay05@gmail.com"
+            className="hover:opacity-70 flex items-center gap-2"
           >
-            <FaXTwitter size={24} />
+            <Mail size={20} />
+            <span>Email</span>
           </a>
-          <a
-            href="https://youtube.com/rohitcpatharre"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-70"
-          >
-            <FaYoutube size={24} />
-          </a>
-          <a
-            href="https://discord.com/users/ropats16"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-70"
-          >
-            <FaDiscord size={24} />
-          </a>
+          <div className="flex items-center gap-2">
+            <MapPin size={20} />
+            <span>Philippines</span>
+          </div>
         </motion.div>
       </motion.div>
+
+      {/* Right Side - Profile Image */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="relative w-full md:w-5/12 aspect-square md:aspect-auto md:h-[600px]"
+        className="relative w-56 md:w-72 aspect-square rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
       >
         <Image
-          src="/pfp_new.png"
+          src="http://arweave.net/Pl_SeL00Zs0WBVqCtjOiMjaLMqb1g8f-XckEalFp2g4"
           alt="Profile Image"
-          width={600}
-          height={600}
-          className="object-fit rounded-full"
-          priority
+          layout="fill"
+          objectFit="cover"
         />
       </motion.div>
     </motion.div>

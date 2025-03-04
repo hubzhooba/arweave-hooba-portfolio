@@ -28,27 +28,17 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold">
-              Hey, it&apos;s Rohit!
+              hey, Jordyn here!
             </h2>
             <p className="text-xl text-muted-foreground">
-              I&apos;m a Developer Relations Engineer based in India,
-              specializing in creating educational content and tools that
-              simplify technical concepts. I&apos;m passionate about the Arweave
-              ecosystem, where I believe in collaboration over competition.
+            My curiosity for computers began at age 13, fueled by countless hours playing Counter-Strike and Warcraft, which naturally led me to pursue a career in tech. I've been working as a software engineer, specializing in blockchain development and design, for over 3 years!
             </p>
             <p className="text-xl text-muted-foreground">
-              My journey in the web3 space has been focused on building bridges
-              between complex technology and developers. Through my work at
-              Arweave India, Community Labs, and Developer DAO, I&apos;ve
-              consistently worked to make technology more accessible and
-              enjoyable to learn.
+            Alongside my Web3 journey, I run a marketing agency built on the philosophy of Creative Strategies, Powerful Connections. We collaborate with local brands to craft compelling digital narratives. When I'm not at my desk, you can find me outdoors soaking in nature's energy.
             </p>
             <p className="text-xl text-muted-foreground">
-              The following philosophy guides my work, as I always say 👇
+            Health, Family & Friends. And above all -  Purpose…
             </p>
-            {/* <p className="text-xl font-medium italic">
-              &quot;Come for the tech, stay for the vibes.&quot;
-            </p> */}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +47,7 @@ export function About() {
             className="relative w-full aspect-video"
           >
             <Image
-              src="/vibes.png"
+              src="http://arweave.net/IWJ-7Bo3fqlRwPjke2JxcoU2ToExnqY9D1O2x6C1b-s"
               alt="About Image"
               fill
               className="object-cover rounded-2xl"

@@ -1,8 +1,7 @@
 "use client";
 
-import { Mail, MapPin } from "lucide-react";
-import { FaXTwitter, FaYoutube, FaDiscord } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
+import { FaXTwitter, FaLinkedin, FaDownload, FaPaperclip } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import { handleEmailClick } from "@/lib/utils";
 
@@ -17,55 +16,28 @@ export function Footer() {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
+          className="text-center space-y-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center space-y-8"
         >
           <h2 className="text-4xl md:text-5xl font-bold">
             Let&apos;s create something amazing
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Whether you&apos;re interested in learning about Arweave, need help
-            with web3 development, or want to collaborate on educational
-            content, I&apos;d love to hear from you.
+            Whether you&apos;re interested in learning about Blockchain, need help with IT Solutions, or want to collaborate on cool projects, I&apos;d love to connect.
           </p>
+
+          {/* Social media icons from Hero */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Button size="lg" className="mt-4" onClick={handleEmailClick}>
-              Get in touch
-            </Button>
-          </motion.div>
-          <motion.div
-            className="flex justify-center gap-8 pt-8"
+            className="flex justify-center gap-4 pt-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <a
-              href="#"
-              onClick={handleEmailClick}
-              className="hover:opacity-70 flex items-center gap-2"
-            >
-              <Mail size={20} />
-              <span>Email</span>
-            </a>
-            <a href="#" className="hover:opacity-70 flex items-center gap-2">
-              <MapPin size={20} />
-              <span>India</span>
-            </a>
-          </motion.div>
-          <motion.div
-            className="flex justify-center gap-6 pt-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <a
-              href="https://x.com/ropats16"
+              href="https://x.com/hoobatech"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -73,20 +45,21 @@ export function Footer() {
               <FaXTwitter size={24} />
             </a>
             <a
-              href="https://youtube.com/rohitcpatharre"
+              href="https://www.linkedin.com/in/jordynwhay/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
             >
-              <FaYoutube size={24} />
+              <FaLinkedin size={24} />
             </a>
             <a
-              href="https://discord.com/users/ropats16"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70"
+              onClick={handleEmailClick}
+              className="hover:opacity-70 cursor-pointer"
             >
-              <FaDiscord size={24} />
+              <SiGmail size={24} />
+            </a>
+            <a href="/Jordyn's_Resume.pdf" download className="hover:opacity-70">
+              <FaPaperclip size={24} />
             </a>
           </motion.div>
           <motion.div
@@ -95,7 +68,13 @@ export function Footer() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <p>&copy; {new Date().getFullYear()} Rohit. All rights reserved.</p>
+          <p>
+          </p>
+            <p>&copy; {new Date().getFullYear()} Jordyn. All rights reserved.</p>
+            <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
+          This website is <strong>fully deployed on the blockchain</strong>, with all
+          assets permanently stored on <strong>decentralized cloud storage</strong>.
+          </p>
           </motion.div>
         </motion.div>
       </div>
