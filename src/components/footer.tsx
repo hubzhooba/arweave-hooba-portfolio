@@ -60,7 +60,7 @@ export function Footer() {
             </a>
             {/* Resume link now opens in a new tab */}
             <a 
-              href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU?ext=pdf"
+              href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
