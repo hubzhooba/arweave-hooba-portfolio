@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: "http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s", // ✅ Only Arweave favicon
+    icon: "http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s", 
   },
 };
 
@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s" type="image/png" />
-        <link rel="shortcut icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s" />
+        <link rel="icon" href="http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s" type="image/png" />
+        <link rel="shortcut icon" href="http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s" />
       </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
