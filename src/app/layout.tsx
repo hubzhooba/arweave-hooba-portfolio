@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "http://arweave.net/hssE2Z_g0G8XRH2PhfLvnCLdj1sW-2RPP-nqFrApRJA",
   },
-}
+};
 
 export default function RootLayout({
   children,
@@ -22,6 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Explicitly set the favicon */}
+        <link
+          rel="icon"
+          type="image/png"
+          href="http://arweave.net/hssE2Z_g0G8XRH2PhfLvnCLdj1sW-2RPP-nqFrApRJA"
+        />
+      </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <Navigation />
