@@ -28,13 +28,13 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold">
-              hey, Jordyn here!
+            hey, Jordyn here!
             </h2>
             <p className="text-xl text-muted-foreground">
-            My curiosity for computers began at age 13, fueled by countless hours playing Counter-Strike and Warcraft, which naturally led me to pursue a career in tech. I've been working as a software engineer, specializing in blockchain development and design, for over 3 years!
+            My curiosity for computers began at age 13, fueled by countless hours playing Counter-Strike and Warcraft, which naturally led me to pursue a career in tech. I&apos;ve been working as a software engineer, specializing in blockchain development and design, for over 3 years!
             </p>
             <p className="text-xl text-muted-foreground">
-            Alongside my Web3 journey, I run a marketing agency built on the philosophy of Creative Strategies, Powerful Connections. We collaborate with local brands to craft compelling digital narratives. When I'm not at my desk, you can find me outdoors soaking in nature's energy.
+            Alongside my Web3 journey, I run a marketing agency built on the philosophy of Creative Strategies, Powerful Connections. We collaborate with local brands to craft compelling digital narratives. When I&apos;m not at my desk, you can find me outdoors soaking in nature's energy.
             </p>
             <p className="text-xl text-muted-foreground">
             Health, Family & Friends. And above all -  Purpose…
