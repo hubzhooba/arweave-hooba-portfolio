@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: "http://arweave.net/hssE2Z_g0G8XRH2PhfLvnCLdj1sW-2RPP-nqFrApRJA",
+    icon: "/favicon.ico",
   },
 };
 
