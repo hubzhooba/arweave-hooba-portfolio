@@ -38,6 +38,7 @@ const workProjects = [
 const personalProjects = [
   {
     title: "Club Creative",
+    period: "",
     image: "http://arweave.net/xvFqc4RogNADej4eCTxcPwq6s2JjfJJo34-dSyd0cEQ",
     description:
       "Co-founded an independent social media marketing agency in 2024.",
