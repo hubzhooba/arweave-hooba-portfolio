@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -44,6 +44,7 @@ const personalProjects = [
     description:
       "Co-founded an Independent Social Media Marketing Agency in 2024.",
     link: "https://clubcreative.ph/",
+    external: true, // Mark as external link
   },
   {
     title: "Creative Coding",
@@ -51,8 +52,11 @@ const personalProjects = [
     image: "http://arweave.net/rHSfSAHzmuY3hFxJ6czYeSoh7HQ1r_RjdunrebHyt6c",
     description: "In my freetime, I like to code.",
     link: "/art",
+    external: false, // Internal navigation
   },
 ];
+
+export default personalProjects;
 
 export function Work() {
   return (

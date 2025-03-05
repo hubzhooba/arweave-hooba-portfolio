@@ -30,7 +30,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href={`${FAVICON_URL}`} />
         <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#000000" />
         <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#5bbad5" />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
