@@ -10,7 +10,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 
-// Separate arrays for Work projects and Personal projects
+// Work projects list
 const workProjects = [
   {
     title: "Tenup.io",
@@ -36,6 +36,7 @@ const workProjects = [
   },
 ];
 
+// Personal projects list
 const personalProjects = [
   {
     title: "Club Creative",
@@ -49,7 +50,7 @@ const personalProjects = [
     title: "Creative Coding",
     period: "-",
     image: "http://arweave.net/rHSfSAHzmuY3hFxJ6czYeSoh7HQ1r_RjdunrebHyt6c",
-    description: "In my freetime, I like to code.",
+    description: "In my free time, I like to code.",
     link: "/art",
   },
 ];
@@ -57,185 +58,137 @@ const personalProjects = [
 export function Work() {
   return (
     <>
-      {/* Work (Experience) Section */}
+      {/* Work Experience Section */}
       <motion.section
         id="work"
-        className="py-20 px-4 md:px-8"
+        className="py-16 px-6 sm:px-10 md:px-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Updated heading styling */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-lg uppercase tracking-wide text-gray-500 mb-8"
+          className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide text-gray-500 mb-8"
         >
           Experience
         </motion.h2>
 
-        <div className="w-full flex flex-col gap-8">
-          {workProjects.map((project, index) => {
-            const cardContent = (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <Card
-                  className="relative w-full h-[120px] flex rounded-xl text-card-foreground shadow border-0
-                             group-hover:shadow-none transition-shadow duration-300"
-                >
-                  {/* Left Image Column (80x80) */}
-                  <div className="flex items-center justify-center w-[80px] h-[80px] ml-4 my-auto overflow-hidden rounded-l-xl">
-                    <motion.div
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative w-full h-full"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-contain"
-                      />
-                    </motion.div>
-                  </div>
+        <div className="w-full flex flex-col gap-6 sm:gap-8">
+          {workProjects.map((project, index) => (
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group cursor-pointer"
+            >
+              <Card className="relative w-full flex flex-col sm:flex-row rounded-xl shadow-lg border border-gray-200">
+                {/* Left Image */}
+                <div className="flex items-center justify-center w-full sm:w-[100px] h-[100px] sm:h-auto overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={100}
+                    height={100}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
 
-                  {/* Right Text Column */}
-                  <div className="flex-1 h-full p-4 flex flex-col justify-center">
-                    <CardHeader className="p-0">
-                      <CardTitle className="text-2xl font-semibold">
-                        {project.title}
-                      </CardTitle>
-                    </CardHeader>
+                {/* Right Text Column */}
+                <div className="flex-1 p-4 flex flex-col justify-center text-center sm:text-left">
+                  <CardHeader className="p-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold">
+                      {project.title}
+                    </CardTitle>
+                  </CardHeader>
 
-                    {/* Absolutely position the period at the top-right */}
-                    <CardDescription className="absolute top-2 right-4 text-sm">
-                      {project.period}
-                    </CardDescription>
+                  <CardDescription className="text-sm sm:text-base mt-1">
+                    {project.description}
+                  </CardDescription>
 
-                    <CardContent className="p-0 mt-2">
-                      <CardDescription className="text-sm">
-                        {project.description}
-                      </CardDescription>
-                    </CardContent>
-                  </div>
-                </Card>
-              </motion.div>
-            );
-
-            return project.link ? (
-              <a
-                href={project.link}
-                key={project.title}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {cardContent}
-              </a>
-            ) : (
-              cardContent
-            );
-          })}
+                  {/* Period at top-right for larger screens */}
+                  <CardDescription className="sm:absolute sm:top-2 sm:right-4 text-xs sm:text-sm">
+                    {project.period}
+                  </CardDescription>
+                </div>
+              </Card>
+            </motion.a>
+          ))}
         </div>
       </motion.section>
 
       {/* Personal Projects Section */}
       <motion.section
         id="personal-projects"
-        className="py-20 px-4 md:px-8"
+        className="py-16 px-6 sm:px-10 md:px-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Updated heading styling */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-lg uppercase tracking-wide text-gray-500 mb-8"
+          className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide text-gray-500 mb-8"
         >
           Personal Projects
         </motion.h2>
 
-        <div className="w-full flex flex-col gap-8">
-          {personalProjects.map((project, index) => {
-            const cardContent = (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <Card
-                  className="relative w-full h-[120px] flex rounded-xl text-card-foreground shadow border-0
-                             group-hover:shadow-none transition-shadow duration-300"
-                >
-                  {/* Left Image Column (80x80) */}
-                  <div className="flex items-center justify-center w-[80px] h-[80px] ml-4 my-auto overflow-hidden rounded-l-xl">
-                    <motion.div
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative w-full h-full"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-contain"
-                      />
-                    </motion.div>
-                  </div>
+        <div className="w-full flex flex-col gap-6 sm:gap-8">
+          {personalProjects.map((project, index) => (
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group cursor-pointer"
+            >
+              <Card className="relative w-full flex flex-col sm:flex-row rounded-xl shadow-lg border border-gray-200">
+                {/* Left Image */}
+                <div className="flex items-center justify-center w-full sm:w-[100px] h-[100px] sm:h-auto overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={100}
+                    height={100}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
 
-                  {/* Right Text Column */}
-                  <div className="flex-1 h-full p-4 flex flex-col justify-center">
-                    <CardHeader className="p-0">
-                      <CardTitle className="text-2xl font-semibold">
-                        {project.title}
-                      </CardTitle>
-                    </CardHeader>
+                {/* Right Text Column */}
+                <div className="flex-1 p-4 flex flex-col justify-center text-center sm:text-left">
+                  <CardHeader className="p-0">
+                    <CardTitle className="text-lg sm:text-xl font-semibold">
+                      {project.title}
+                    </CardTitle>
+                  </CardHeader>
 
-                    {/* Absolutely position the period at the top-right */}
-                    <CardDescription className="absolute top-2 right-4 text-sm">
-                      {project.period}
-                    </CardDescription>
+                  <CardDescription className="text-sm sm:text-base mt-1">
+                    {project.description}
+                  </CardDescription>
 
-                    <CardContent className="p-0 mt-2">
-                      <CardDescription className="text-sm">
-                        {project.description}
-                      </CardDescription>
-                    </CardContent>
-                  </div>
-                </Card>
-              </motion.div>
-            );
-
-            return project.link ? (
-              <a
-                href={project.link}
-                key={project.title}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {cardContent}
-              </a>
-            ) : (
-              cardContent
-            );
-          })}
+                  {/* Period at top-right for larger screens */}
+                  <CardDescription className="sm:absolute sm:top-2 sm:right-4 text-xs sm:text-sm">
+                    {project.period}
+                  </CardDescription>
+                </div>
+              </Card>
+            </motion.a>
+          ))}
         </div>
       </motion.section>
     </>
