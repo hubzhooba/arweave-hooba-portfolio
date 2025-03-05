@@ -7,10 +7,13 @@ import { Navigation } from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Arweave Favicon Hash (Update this with your latest hash)
+const FAVICON_URL = "http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s";
+
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: "http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s?v=2", 
+    icon: `${FAVICON_URL}?v=2`, // Versioned URL to prevent cache issues
   },
 };
 
@@ -22,8 +25,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s?v=2" type="image/x-icon" />
-        <link rel="shortcut icon" href="http://arweave.net/Sr2oTYw46gkoU-mXiycDjgKy8bV0J_zshUFqNjVt87s?v=2" type="image/x-icon" />
+        {/* Primary favicon */}
+        <link rel="icon" href={`${FAVICON_URL}?v=2`} type="image/x-icon" />
+        
+        {/* Alternative formats for better browser support */}
+        <link rel="shortcut icon" href={`${FAVICON_URL}?v=2`} type="image/x-icon" />
+        <link rel="apple-touch-icon" href={`${FAVICON_URL}?v=2`} />
+        <link rel="mask-icon" href={`${FAVICON_URL}?v=2`} color="#000000" />
+        
+        {/* Safari Pinned Tab Icon */}
+        <link rel="mask-icon" href={`${FAVICON_URL}?v=2`} color="#5bbad5" />
+        
+        {/* Web App Manifest (Optional) */}
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
