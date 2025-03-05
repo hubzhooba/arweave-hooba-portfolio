@@ -20,7 +20,7 @@ export function Hero() {
       whileInView={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen px-6 sm:px-10 md:px-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto"
+      className="min-h-[60vh] px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-6 max-w-5xl mx-auto"
     >
       {/* Left Side - Text */}
       <motion.div
@@ -34,7 +34,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-sm sm:text-lg uppercase tracking-wide text-gray-500"
+          className="text-lg uppercase tracking-wide text-gray-500"
         >
           HOOBA
         </motion.h1>
@@ -43,7 +43,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight"
+          className="text-3xl md:text-5xl font-bold tracking-tight"
         >
           Building · Cool · Sh*t
         </motion.h2>
@@ -52,21 +52,21 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-base sm:text-lg text-muted-foreground max-w-[90%] sm:max-w-[600px] mx-auto md:mx-0 leading-relaxed"
+          className="text-lg text-muted-foreground max-w-[600px] mx-auto md:mx-0 leading-relaxed"
         >
           Health, Family & Friends. And above all - Purpose…
         </motion.p>
-
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6 pt-4"
+          className="flex justify-center md:justify-start gap-6 pt-4"
         >
           {/* Email Copy Functionality */}
           <button
             onClick={handleEmailCopy}
-            className="hover:opacity-70 flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg text-sm sm:text-base"
+            className="hover:opacity-70 flex items-center gap-2"
           >
             <Mail size={20} />
             <span>{emailCopied ? "Email Copied!" : "Email"}</span>
@@ -74,7 +74,7 @@ export function Hero() {
           </button>
 
           {/* Location */}
-          <div className="flex items-center gap-2 text-sm sm:text-base">
+          <div className="flex items-center gap-2">
             <MapPin size={20} />
             <span>Philippines</span>
           </div>
@@ -87,14 +87,15 @@ export function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="relative w-40 sm:w-52 md:w-72 aspect-square rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
+        className="relative w-56 md:w-72 aspect-square rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
       >
         <Image
           src="http://arweave.net/Pl_SeL00Zs0WBVqCtjOiMjaLMqb1g8f-XckEalFp2g4"
           alt="Profile Image"
           fill
-          className="object-cover"
+          style={{ objectFit: "cover" }} // Use CSS instead
         />
+
       </motion.div>
     </motion.div>
   );

@@ -8,7 +8,7 @@ import { handleEmailClick } from "@/lib/utils";
 export function Footer() {
   return (
     <motion.footer
-      className="py-16 px-6 sm:px-10 md:px-16"
+      className="py-20 px-4 md:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -16,22 +16,22 @@ export function Footer() {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center space-y-6 sm:space-y-8"
+          className="text-center space-y-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold">
             Let&apos;s create something amazing
           </h2>
-
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Whether you&apos;re interested in learning about Blockchain, need help with IT Solutions, or want to collaborate on cool projects, I&apos;d love to connect.
           </p>
 
+          {/* Social media icons from Hero */}
           <motion.div
-            className="flex justify-center gap-6 sm:gap-8 pt-6 sm:pt-8"
+            className="flex justify-center gap-4 pt-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -42,7 +42,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:opacity-70"
             >
-              <FaXTwitter size={20} className="sm:size-24" />
+              <FaXTwitter size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/jordynwhay/"
@@ -50,32 +50,33 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:opacity-70"
             >
-              <FaLinkedin size={20} className="sm:size-24" />
+              <FaLinkedin size={24} />
             </a>
             <a
               onClick={handleEmailClick}
               className="hover:opacity-70 cursor-pointer"
             >
-              <SiGmail size={20} className="sm:size-24" />
+              <SiGmail size={24} />
             </a>
+            {/* Resume link now opens in a new tab */}
             <a 
               href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
             >
-              <FaPaperclip size={20} className="sm:size-24" />
+              <FaPaperclip size={24} />
             </a>
           </motion.div>
 
           <motion.div
-            className="pt-12 text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto"
+            className="pt-16 text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>&copy; {new Date().getFullYear()} Jordyn. All rights reserved.</p>
-            <p className="mt-2 text-center">
+            <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
               This website is <strong>fully deployed on the blockchain</strong>, with all
               assets permanently stored on <strong>decentralized cloud storage</strong>.
             </p>
