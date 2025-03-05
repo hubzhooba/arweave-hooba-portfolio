@@ -45,14 +45,6 @@ const personalProjects = [
     link: "https://clubcreative.ph/",
     external: true, // Mark as external link
   },
-  {
-    title: "Creative Coding",
-    period: "-",
-    image: "http://arweave.net/rHSfSAHzmuY3hFxJ6czYeSoh7HQ1r_RjdunrebHyt6c",
-    description: "In my freetime, I like to code.",
-    link: "/art",
-    external: false, // Internal navigation
-  },
 ];
 
 export default personalProjects;

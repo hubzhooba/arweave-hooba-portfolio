@@ -90,6 +90,7 @@ export default function ArtPage() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    initialSlide: 0,
   };
 
   return (
