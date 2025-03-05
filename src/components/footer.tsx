@@ -76,10 +76,6 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>&copy; {new Date().getFullYear()} Jordyn. All rights reserved.</p>
-            <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
-              This website is <strong>fully deployed on the blockchain</strong>, with all
-              assets permanently stored on <strong>decentralized cloud storage</strong>.
-            </p>
           </motion.div>
         </motion.div>
       </div>

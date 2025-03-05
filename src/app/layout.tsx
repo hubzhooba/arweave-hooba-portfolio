@@ -3,17 +3,24 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "next-themes";
-import { Navigation } from "@/components/navigation"; 
+import { Navigation } from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Arweave Favicon Hash (Update this with your latest hash)
+// Update with your correct HTTPS Arweave URL
 const FAVICON_URL = "https://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s";
 
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: `${FAVICON_URL}`, // Versioned URL to prevent cache issues
+    icon: FAVICON_URL,
+    shortcut: FAVICON_URL,      // Optional: for "shortcut icon"
+    apple: FAVICON_URL,         // Optional: for Apple touch icon
+    other: {
+      rel: "mask-icon",
+      url: FAVICON_URL,
+      color: "#000000",
+    },
   },
 };
 
@@ -24,14 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href={`${FAVICON_URL}`} type="image/x-icon" />
-        <link rel="shortcut icon" href={`${FAVICON_URL}`} type="image/x-icon" />
-        <link rel="apple-touch-icon" href={`${FAVICON_URL}`} />
-        <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#000000" />
-        <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#5bbad5" />
-      </head>
-      <body className={`${inter.className}`}>
+      <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <Navigation />
           <div className="mx-auto max-w-[1170px] px-4 md:px-6 lg:px-8">
