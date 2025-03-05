@@ -195,6 +195,12 @@ export default function ArtPage() {
           </div>
         ))}
       </Slider>
+
+      {/* Added paragraph with extra space on the bottom */}
+      <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto mt-16 text-center">
+        This website is <strong>fully deployed on the blockchain</strong>, with all
+        assets permanently stored on <strong>decentralized cloud storage</strong>.
+      </p>
     </motion.div>
   );
 }
