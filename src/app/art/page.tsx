@@ -70,7 +70,7 @@ export default function ArtPage() {
     {
       title: "Unsigned_Dream",
       image: "http://arweave.net/fZSzLM2OsvrFnx2LJwsHohEHprHGUa9ONkH7AhUtwxI",
-      description: "I think I'm having lucid dreams again.",
+      description: "I think I'm having lucid dreams again...",
       type: "image",
       position: "center",
     },
@@ -199,7 +199,7 @@ export default function ArtPage() {
       {/* Added paragraph with extra space on the bottom */}
       <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto mt-16 text-center">
         This website is <strong>fully deployed on the blockchain</strong>, with all
-        assets permanently stored on <strong>decentralized cloud storage</strong>.
+        assets permanently stored on <strong>decentralized cloud storage</strong>!
       </p>
     </motion.div>
   );
