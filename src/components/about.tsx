@@ -47,7 +47,7 @@ export function About() {
             className="relative w-full aspect-video"
           >
             <Image
-              src="https://arweave.net/IWJ-7Bo3fqlRwPjke2JxcoU2ToExnqY9D1O2x6C1b-s"
+              src="http://arweave.net/IWJ-7Bo3fqlRwPjke2JxcoU2ToExnqY9D1O2x6C1b-s"
               alt="About Image"
               fill
               className="object-cover rounded-2xl"
