@@ -70,7 +70,7 @@ export default function ArtPage() {
     {
       title: "Unsigned_Dream",
       image: "http://arweave.net/fZSzLM2OsvrFnx2LJwsHohEHprHGUa9ONkH7AhUtwxI",
-      description: "I had a dream",
+      description: "I think I'm having lucid dreams again.",
       type: "image",
       position: "center",
     },
