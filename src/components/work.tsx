@@ -16,14 +16,14 @@ const workProjects = [
     period: "2025 - Present",
     image: "http://arweave.net/udzRhbzUUAp9afZ1dRAqdCDLOQNOzYK63rtTzyv-APw",
     description: "Senior Technical Support Lead (Part-time)",
-    link: "https://x.com/TenupNation",
+    link: "http://x.com/TenupNation",
   },
   {
     title: "Aquagen Technologies Inc.",
     period: "Jun 2024 - Aug 2024",
     image: "http://arweave.net/beBGV4Xjf5opo5GBVcivwIcllnV6itnudhjWP_hhxTg",
     description: "Computer Science Specialist",
-    link: "https://aquagen.com.ph/",
+    link: "http://aquagen.com.ph/",
   },
   {
     title: "Jpg.Store",
@@ -31,7 +31,7 @@ const workProjects = [
     image: "http://arweave.net/4UxzCdv_oRmg8Pb37xo-iabtjzFrlqtjhQYUf3Itg0Q",
     description:
       "Information Technical Support & Quality Assurance Engineer (Full-time)",
-    link: "https://x.com/jpgstoreNFT",
+    link: "http://x.com/jpgstoreNFT",
   },
 ];
 
@@ -42,7 +42,7 @@ const personalProjects = [
     image: "http://arweave.net/xvFqc4RogNADej4eCTxcPwq6s2JjfJJo34-dSyd0cEQ",
     description:
       "Co-founded an independent social media marketing agency in 2024.",
-    link: "https://clubcreative.ph/",
+    link: "http://clubcreative.ph/",
     external: true, // Mark as external link
   },
 ];
