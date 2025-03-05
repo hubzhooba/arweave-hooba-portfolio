@@ -8,7 +8,7 @@ import { Navigation } from "@/components/navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 // Arweave Favicon Hash (Update this with your latest hash)
-const FAVICON_URL = "https://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s";
+const FAVICON_URL = "http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6f3s";
 
 export const metadata: Metadata = {
   title: "Jordyn",
