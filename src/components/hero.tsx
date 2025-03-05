@@ -11,7 +11,7 @@ export function Hero() {
   const handleEmailCopy = () => {
     navigator.clipboard.writeText("jordynhay05@gmail.com");
     setEmailCopied(true);
-    setTimeout(() => setEmailCopied(false), 1000); // Reset after 2 seconds
+    setTimeout(() => setEmailCopied(false), 1000);
   };
 
   return (
@@ -22,7 +22,6 @@ export function Hero() {
       transition={{ duration: 0.5 }}
       className="min-h-[60vh] px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-6 max-w-5xl mx-auto"
     >
-      {/* Left Side - Text */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +62,6 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex justify-center md:justify-start gap-6 pt-4"
         >
-          {/* Email Copy Functionality */}
           <button
             onClick={handleEmailCopy}
             className="hover:opacity-70 flex items-center gap-2"
@@ -73,7 +71,6 @@ export function Hero() {
             {emailCopied && <Check size={16} className="text-green-500" />}
           </button>
 
-          {/* Location */}
           <div className="flex items-center gap-2">
             <MapPin size={20} />
             <span>Philippines</span>
@@ -81,7 +78,6 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Right Side - Profile Image */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +89,7 @@ export function Hero() {
           src="http://arweave.net/Pl_SeL00Zs0WBVqCtjOiMjaLMqb1g8f-XckEalFp2g4"
           alt="Profile Image"
           fill
-          style={{ objectFit: "cover" }} // Use CSS instead
+          style={{ objectFit: "cover" }} 
         />
 
       </motion.div>

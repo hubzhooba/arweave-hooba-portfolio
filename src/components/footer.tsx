@@ -8,7 +8,7 @@ import { handleEmailClick } from "@/lib/utils";
 export function Footer() {
   return (
     <motion.footer
-      id="contact" // Added id for anchor linking
+      id="contact"
       className="py-20 px-4 md:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -30,7 +30,6 @@ export function Footer() {
             Whether you&apos;re interested in learning about Blockchain, need help with IT Solutions, or want to collaborate on cool projects, I&apos;d love to connect.
           </p>
 
-          {/* Social media icons from Hero */}
           <motion.div
             className="flex justify-center gap-4 pt-8"
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +58,6 @@ export function Footer() {
             >
               <SiGmail size={24} />
             </a>
-            {/* Resume link now opens in a new tab */}
             <a 
               href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
               target="_blank"

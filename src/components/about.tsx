@@ -34,7 +34,7 @@ export function About() {
             My curiosity for computers began at age 13, fueled by countless hours playing Counter-Strike and Warcraft, which naturally led me to pursue a career in tech. I&apos;ve been working as a software engineer, specializing in blockchain development and design, for over 3 years!
             </p>
             <p className="text-xl text-muted-foreground">
-            Alongside my Web3 journey, I run a marketing agency built on the principle of 100% ownership—because you deserve to keep every bit of your creative work. We bridge creators and local brands to forge powerful connections and create compelling digital strategies. When I&apos;m not at my desk, you can find me outdoors soaking in nature&apos;s energy.
+            Alongside my Web3 journey, I run a marketing agency built on the principle of 100% ownership, because creators deserve to keep every bit of their creative work. We bridge creators and local brands to forge powerful connections and create compelling digital strategies. When I&apos;m not at my desk, you can find me outdoors soaking in nature&apos;s energy.
 
             </p>
             <p className="text-xl text-muted-foreground">

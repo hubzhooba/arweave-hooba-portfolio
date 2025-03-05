@@ -11,13 +11,10 @@ export function Navigation() {
 
   return (
     <>
-      {/* Keep your existing nav padding so the menu stays in place */}
       <nav className="py-4 px-4 md:px-8">
         <div className="w-full md:max-w-[1170px] md:mx-auto flex items-center justify-between">
-          {/* Logo Section with negative left margin */}
           <Link href="/">
             <motion.div
-              // -ml-4 moves the logo 16px further left than the container padding
               className="relative w-[120px] h-[40px] -ml-8"
               initial={{ scale: 3 }}
               whileHover={{ scale: 3.33 }}
@@ -31,8 +28,6 @@ export function Navigation() {
               />
             </motion.div>
           </Link>
-
-          {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-6">
             <li>
               <Link href="/#about" className="hover:opacity-70">
@@ -56,7 +51,6 @@ export function Navigation() {
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(true)}
@@ -67,7 +61,6 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col">
           <div className="p-4 flex justify-end">

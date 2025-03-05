@@ -100,7 +100,6 @@ export default function ArtPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Pinned Section */}
       <h2 className="text-lg uppercase tracking-wide text-gray-500 mb-8">
         Pinned
       </h2>
@@ -123,7 +122,6 @@ export default function ArtPage() {
             onMouseEnter={() => setHoveredPinned(index)}
             onMouseLeave={() => setHoveredPinned(null)}
           >
-            {/* Removed aspect-video; container is flexible */}
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               {art.type === "image" && (
                 <Image
@@ -131,7 +129,6 @@ export default function ArtPage() {
                   alt={art.title}
                   width={2000}
                   height={2000}
-                  // Fill container width, auto height, cover for cropping
                   className="w-full h-auto object-cover"
                 />
               )}
@@ -143,7 +140,6 @@ export default function ArtPage() {
         ))}
       </div>
 
-      {/* Digital Art Section Carousel */}
       <h2 className="text-lg uppercase tracking-wide text-gray-500 mb-8">
         Digital Art
       </h2>
@@ -180,7 +176,6 @@ export default function ArtPage() {
                     autoPlay
                     loop
                     muted
-                    // Match image styling: fill width, auto height, cover
                     className="w-full h-auto object-cover"
                   />
                 )}
@@ -196,6 +191,13 @@ export default function ArtPage() {
           </div>
         ))}
       </Slider>
+
+      <div className="mt-16 text-center">
+        <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
+          This website is <strong>fully deployed on the blockchain</strong>, with all
+          assets permanently stored on <strong>decentralized cloud storage</strong>.
+        </p>
+      </div>
     </motion.div>
   );
 }
