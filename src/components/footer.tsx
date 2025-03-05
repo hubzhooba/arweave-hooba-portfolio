@@ -8,6 +8,7 @@ import { handleEmailClick } from "@/lib/utils";
 export function Footer() {
   return (
     <motion.footer
+      id="contact" // Added id for anchor linking
       className="py-20 px-4 md:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -37,7 +38,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <a
-              href="http://x.com/hoobatech"
+              href="https://x.com/hoobatech"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -45,7 +46,7 @@ export function Footer() {
               <FaXTwitter size={24} />
             </a>
             <a
-              href="http://www.linkedin.com/in/jordynwhay/"
+              href="https://www.linkedin.com/in/jordynwhay/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -60,7 +61,7 @@ export function Footer() {
             </a>
             {/* Resume link now opens in a new tab */}
             <a 
-              href="http://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
+              href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -76,6 +77,10 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>&copy; {new Date().getFullYear()} Jordyn. All rights reserved.</p>
+            <p className="text-x2 text-muted-foreground max-w-3x2 mx-auto">
+              This website is <strong>fully deployed on the blockchain</strong>, with all
+              assets permanently stored on <strong>decentralized cloud storage</strong>.
+            </p>
           </motion.div>
         </motion.div>
       </div>
