@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,7 +15,8 @@ export default function ArtPage() {
     {
       title: "Unsigned_Sabrina",
       image: "http://arweave.net/mYN9HU8Q46EVScJmUnEiRe96eHSuz0jo2FN5Hj__rjw",
-      description: "A heartfelt tribute to the classic film 'Sabrina', celebrating the unmatched charm and talent of my favorite actor.",
+      description:
+        "A heartfelt tribute to the classic film 'Sabrina', celebrating the unmatched charm and talent of my favorite actor.",
       type: "image",
       position: "center",
     },
@@ -29,40 +31,42 @@ export default function ArtPage() {
 
   const digitalArt = [
     {
-        title: "Unsigned_Algorithm#30474",
-        image: "http://arweave.net/hNBfpIECErzrN5_t3DA_3TClPlJ8oh1AusxueYczeAw",
-        description: "Unlocking the secrets of the universe through energy, frequency and vibration.",
-        type: "image",
-        position: "center",
+      title: "Unsigned_Algorithm#30474",
+      image: "http://arweave.net/hNBfpIECErzrN5_t3DA_3TClPlJ8oh1AusxueYczeAw",
+      description:
+        "Unlocking the secrets of the universe through energy, frequency and vibration.",
+      type: "image",
+      position: "center",
     },
     {
-        title: "Untapped Energy",
-        image: "http://arweave.net/owbiYHC1abkwirHXR9xtFoMQRWmayXt5eDZ7E0I7rfE",
-        description: "",
-        type: "image",
-        position: "center",
-      },
-    {
-        title: "Unsigned_Fractals",
-        image: "http://arweave.net/YbAk8GbgBiHPmnz4dEEwX_kqRlMmEX4dHbFanIc9kn8",
-        description: "Unlocking the secrets of the universe through energy, frequency and vibration.",
-        type: "image",
-        position: "center",
+      title: "Untapped Energy",
+      image: "http://arweave.net/owbiYHC1abkwirHXR9xtFoMQRWmayXt5eDZ7E0I7rfE",
+      description: "",
+      type: "image",
+      position: "center",
     },
     {
-        title: "La Playa",
-        image: "http://arweave.net/87L-wDVeWS6b5Sho2NzhBuqhWRAClTIkii6BJFtFsrc",
-        description: "",
-        type: "video",
-        position: "center",
-      },
+      title: "Unsigned_Fractals",
+      image: "http://arweave.net/YbAk8GbgBiHPmnz4dEEwX_kqRlMmEX4dHbFanIc9kn8",
+      description:
+        "Unlocking the secrets of the universe through energy, frequency and vibration.",
+      type: "image",
+      position: "center",
+    },
     {
-        title: "Unsigned_Scarface",
-        image: "http://arweave.net/uqbHebmdC2KtIhnP5g05hO6ZK-fSheNl3vtx3BGyqnM",
-        description: "What's my name? Dunkaccino",
-        type: "image",
-        position: "center",
-      },
+      title: "La Playa",
+      image: "http://arweave.net/87L-wDVeWS6b5Sho2NzhBuqhWRAClTIkii6BJFtFsrc",
+      description: "",
+      type: "video",
+      position: "center",
+    },
+    {
+      title: "Unsigned_Scarface",
+      image: "http://arweave.net/uqbHebmdC2KtIhnP5g05hO6ZK-fSheNl3vtx3BGyqnM",
+      description: "What's my name? Dunkaccino",
+      type: "image",
+      position: "center",
+    },
     {
       title: "Unsigned_Dream",
       image: "http://arweave.net/fZSzLM2OsvrFnx2LJwsHohEHprHGUa9ONkH7AhUtwxI",
@@ -118,13 +122,18 @@ export default function ArtPage() {
             onMouseEnter={() => setHoveredPinned(index)}
             onMouseLeave={() => setHoveredPinned(null)}
           >
-            <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
-              {/* Use a normal <img> to display the raw image */}
-              <img
-                src={art.image}
-                alt={art.title}
-                className="max-w-full h-auto block mx-auto"
-              />
+            {/* Removed aspect-video; container is flexible */}
+            <div className="relative overflow-hidden rounded-lg shadow-lg">
+              {art.type === "image" && (
+                <Image
+                  src={art.image}
+                  alt={art.title}
+                  width={2000}
+                  height={2000}
+                  // Fill container width, auto height, cover for cropping
+                  className="w-full h-auto object-cover"
+                />
+              )}
             </div>
 
             <h2 className="mt-4 text-lg font-semibold">{art.title}</h2>
@@ -155,13 +164,14 @@ export default function ArtPage() {
                   : "opacity-100"
               }`}
             >
-              <div className="w-full overflow-hidden rounded-lg shadow-lg">
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
                 {art.type === "image" ? (
-                  // Show raw image size
-                  <img
+                  <Image
                     src={art.image}
                     alt={art.title}
-                    className="max-w-full h-auto block mx-auto"
+                    width={2000}
+                    height={2000}
+                    className="w-full h-auto object-cover"
                   />
                 ) : (
                   <video
@@ -169,7 +179,8 @@ export default function ArtPage() {
                     autoPlay
                     loop
                     muted
-                    className="max-w-full h-auto block mx-auto"
+                    // Match image styling: fill width, auto height, cover
+                    className="w-full h-auto object-cover"
                   />
                 )}
               </div>
