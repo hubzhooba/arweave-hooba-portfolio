@@ -37,7 +37,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <a
-              href="https://x.com/hoobatech"
+              href="http://x.com/hoobatech"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -45,7 +45,7 @@ export function Footer() {
               <FaXTwitter size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/jordynwhay/"
+              href="http://www.linkedin.com/in/jordynwhay/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
@@ -60,7 +60,7 @@ export function Footer() {
             </a>
             {/* Resume link now opens in a new tab */}
             <a 
-              href="https://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
+              href="http://arweave.net/LCEuPlNUr2iX1NWp2HTIw9F9RssdHtQxAaWSJOa22uU"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70"
