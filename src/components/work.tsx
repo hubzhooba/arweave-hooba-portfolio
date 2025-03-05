@@ -93,7 +93,8 @@ export function Work() {
                 className="group cursor-pointer"
               >
                 <Card
-                  className="relative w-full h-[120px] flex rounded-xl text-card-foreground shadow border-0
+                  // Only change: let card auto-expand on mobile
+                  className="relative w-full md:h-[120px] h-auto flex rounded-xl text-card-foreground shadow border-0
                              group-hover:shadow-none transition-shadow duration-300"
                 >
                   {/* Left Image Column (80x80) */}
@@ -114,15 +115,21 @@ export function Work() {
                   </div>
 
                   {/* Right Text Column */}
-                  <div className="flex-1 h-full p-4 flex flex-col justify-center">
+                  {/* Only change: use `justify-start` so the date won't overlap */}
+                  <div className="flex-1 h-full p-4 flex flex-col justify-start">
                     <CardHeader className="p-0">
                       <CardTitle className="text-2xl font-semibold">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
 
-                    {/* Absolutely position the period at the top-right */}
-                    <CardDescription className="absolute top-2 right-4 text-sm">
+                    {/* Absolutely position the period at the top-right for desktop */}
+                    <CardDescription className="absolute top-2 right-4 text-sm hidden md:block">
+                      {project.period}
+                    </CardDescription>
+
+                    {/* Show date in normal flow on mobile to avoid overlap */}
+                    <CardDescription className="text-sm md:hidden">
                       {project.period}
                     </CardDescription>
 
@@ -184,7 +191,8 @@ export function Work() {
                 className="group cursor-pointer"
               >
                 <Card
-                  className="relative w-full h-[120px] flex rounded-xl text-card-foreground shadow border-0
+                  // Same small fix for auto-height on mobile
+                  className="relative w-full md:h-[120px] h-auto flex rounded-xl text-card-foreground shadow border-0
                              group-hover:shadow-none transition-shadow duration-300"
                 >
                   {/* Left Image Column (80x80) */}
@@ -205,15 +213,20 @@ export function Work() {
                   </div>
 
                   {/* Right Text Column */}
-                  <div className="flex-1 h-full p-4 flex flex-col justify-center">
+                  <div className="flex-1 h-full p-4 flex flex-col justify-start">
                     <CardHeader className="p-0">
                       <CardTitle className="text-2xl font-semibold">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
 
-                    {/* Absolutely position the period at the top-right */}
-                    <CardDescription className="absolute top-2 right-4 text-sm">
+                    {/* Absolutely position the period at the top-right for desktop */}
+                    <CardDescription className="absolute top-2 right-4 text-sm hidden md:block">
+                      {project.period}
+                    </CardDescription>
+
+                    {/* Show date in normal flow on mobile */}
+                    <CardDescription className="text-sm md:hidden">
                       {project.period}
                     </CardDescription>
 

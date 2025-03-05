@@ -11,13 +11,14 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="py-4 px-8">
-        {/* Centering the nav content */}
-        <div className="mx-auto max-w-[1170px] flex items-center justify-between">
-          {/* Logo Section */}
+      {/* Keep your existing nav padding so the menu stays in place */}
+      <nav className="py-4 px-4 md:px-8">
+        <div className="w-full md:max-w-[1170px] md:mx-auto flex items-center justify-between">
+          {/* Logo Section with negative left margin */}
           <Link href="/">
             <motion.div
-              className="relative w-[120px] h-[40px]"
+              // -ml-4 moves the logo 16px further left than the container padding
+              className="relative w-[120px] h-[40px] -ml-8"
               initial={{ scale: 3 }}
               whileHover={{ scale: 3.33 }}
               transition={{ duration: 0.3 }}
