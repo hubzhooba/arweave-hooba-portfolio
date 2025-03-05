@@ -13,7 +13,7 @@ const FAVICON_URL = "http://arweave.net/sktybgS6FlI3uVWSKw16iMsR805gyxq3BACTxdv6
 export const metadata: Metadata = {
   title: "Jordyn",
   icons: {
-    icon: `${FAVICON_URL}?v=2`, // Versioned URL to prevent cache issues
+    icon: `${FAVICON_URL}`, // Versioned URL to prevent cache issues
   },
 };
 
@@ -25,18 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Primary favicon */}
-        <link rel="icon" href={`${FAVICON_URL}?v=2`} type="image/x-icon" />
-        
-        {/* Alternative formats for better browser support */}
-        <link rel="shortcut icon" href={`${FAVICON_URL}?v=2`} type="image/x-icon" />
-        <link rel="apple-touch-icon" href={`${FAVICON_URL}?v=2`} />
-        <link rel="mask-icon" href={`${FAVICON_URL}?v=2`} color="#000000" />
-        
-        {/* Safari Pinned Tab Icon */}
-        <link rel="mask-icon" href={`${FAVICON_URL}?v=2`} color="#5bbad5" />
-        
-        {/* Web App Manifest (Optional) */}
+        <link rel="icon" href={`${FAVICON_URL}`} type="image/x-icon" />
+        <link rel="shortcut icon" href={`${FAVICON_URL}`} type="image/x-icon" />
+        <link rel="apple-touch-icon" href={`${FAVICON_URL}`} />
+        <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#000000" />
+        <link rel="mask-icon" href={`${FAVICON_URL}?`} color="#5bbad5" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className}`}>
