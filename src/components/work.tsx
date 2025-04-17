@@ -11,6 +11,13 @@ import {
 
 const workProjects = [
   {
+    title: "Autonomous Finance",
+    period: "March 2025 - Present",
+    image: "http://arweave.net/cOV90GN1NnxllAdKN951gY0oFOmdMbpSCRhlY_oESoA",
+    description: "Technical Product Manager",
+    link: "https://x.com/autonomous_af",
+  },
+  {
     title: "Tenup.io",
     period: "2025 - Present",
     image: "http://arweave.net/udzRhbzUUAp9afZ1dRAqdCDLOQNOzYK63rtTzyv-APw",
@@ -19,7 +26,7 @@ const workProjects = [
   },
   {
     title: "Aquagen Technologies Inc.",
-    period: "Jun 2024 - Aug 2024",
+    period: "June 2024 - Aug 2024",
     image: "http://arweave.net/beBGV4Xjf5opo5GBVcivwIcllnV6itnudhjWP_hhxTg",
     description: "Computer Science Specialist",
     link: "https://aquagen.com.ph/",
