@@ -47,7 +47,7 @@ const personalProjects = [
     period: "",
     image: "http://arweave.net/xvFqc4RogNADej4eCTxcPwq6s2JjfJJo34-dSyd0cEQ",
     description:
-      "Co-founded an independent social media marketing agency in 2024.",
+      "Co-founded an independent social media marketing agency in 2024",
     link: "https://clubcreative.ph/",
     external: true,
   },
