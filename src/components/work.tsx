@@ -19,7 +19,7 @@ const workProjects = [
   },
   {
     title: "Tenup.io",
-    period: "2025 - Present",
+    period: "2025 - June 2025",
     image: "http://arweave.net/udzRhbzUUAp9afZ1dRAqdCDLOQNOzYK63rtTzyv-APw",
     description: "Senior Technical Support Lead (Part-time)",
     link: "https://x.com/TenupNation",
