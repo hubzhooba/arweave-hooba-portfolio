@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,7 +14,7 @@ export default function ArtPage() {
   const pinnedArtworks = [
     {
       title: "Unsigned_Sabrina",
-      image: "http://arweave.net/mYN9HU8Q46EVScJmUnEiRe96eHSuz0jo2FN5Hj__rjw",
+      image: "https://defi.ao/mYN9HU8Q46EVScJmUnEiRe96eHSuz0jo2FN5Hj__rjw",
       description:
         "A heartfelt tribute to the classic film 'Sabrina', celebrating the unmatched charm and talent of my favorite actor.",
       type: "image",
@@ -22,7 +22,7 @@ export default function ArtPage() {
     },
     {
       title: "Unsigned_Emma",
-      image: "http://arweave.net/e-LE48QkvX7oAGGBlM1QLQ-gEAXeXucXA56jX63OwQA",
+      image: "https://defi.ao/e-LE48QkvX7oAGGBlM1QLQ-gEAXeXucXA56jX63OwQA",
       description: "Anything goes with emma chamberlain.",
       type: "image",
       position: "center",
@@ -32,7 +32,7 @@ export default function ArtPage() {
   const digitalArt = [
     {
       title: "Unsigned_Algorithm#30474",
-      image: "http://arweave.net/hNBfpIECErzrN5_t3DA_3TClPlJ8oh1AusxueYczeAw",
+      image: "https://defi.ao/hNBfpIECErzrN5_t3DA_3TClPlJ8oh1AusxueYczeAw",
       description:
         "Unlocking the secrets of the universe through energy, frequency and vibration.",
       type: "image",
@@ -40,14 +40,14 @@ export default function ArtPage() {
     },
     {
       title: "Untapped Energy",
-      image: "http://arweave.net/owbiYHC1abkwirHXR9xtFoMQRWmayXt5eDZ7E0I7rfE",
+      image: "https://defi.ao/owbiYHC1abkwirHXR9xtFoMQRWmayXt5eDZ7E0I7rfE",
       description: "",
       type: "image",
       position: "center",
     },
     {
       title: "Unsigned_Fractals",
-      image: "http://arweave.net/YbAk8GbgBiHPmnz4dEEwX_kqRlMmEX4dHbFanIc9kn8",
+      image: "https://defi.ao/YbAk8GbgBiHPmnz4dEEwX_kqRlMmEX4dHbFanIc9kn8",
       description:
         "Unlocking the secrets of the universe through energy, frequency and vibration.",
       type: "image",
@@ -55,28 +55,28 @@ export default function ArtPage() {
     },
     {
       title: "La Playa",
-      image: "http://arweave.net/87L-wDVeWS6b5Sho2NzhBuqhWRAClTIkii6BJFtFsrc",
+      image: "https://defi.ao/87L-wDVeWS6b5Sho2NzhBuqhWRAClTIkii6BJFtFsrc",
       description: "",
       type: "video",
       position: "center",
     },
     {
       title: "Unsigned_Scarface",
-      image: "http://arweave.net/uqbHebmdC2KtIhnP5g05hO6ZK-fSheNl3vtx3BGyqnM",
+      image: "https://defi.ao/uqbHebmdC2KtIhnP5g05hO6ZK-fSheNl3vtx3BGyqnM",
       description: "What's my name? Dunkaccino",
       type: "image",
       position: "center",
     },
     {
       title: "Unsigned_Dream",
-      image: "http://arweave.net/fZSzLM2OsvrFnx2LJwsHohEHprHGUa9ONkH7AhUtwxI",
+      image: "https://defi.ao/fZSzLM2OsvrFnx2LJwsHohEHprHGUa9ONkH7AhUtwxI",
       description: "I had a dream",
       type: "image",
       position: "center",
     },
     {
       title: "Unsigned_Frequencies",
-      image: "http://arweave.net/4iGG6JlhPcqokYeTolhmEYrf51ejvnaadZjaMMJW1cA",
+      image: "https://defi.ao/4iGG6JlhPcqokYeTolhmEYrf51ejvnaadZjaMMJW1cA",
       description: "",
       type: "video",
       position: "center",
@@ -124,12 +124,15 @@ export default function ArtPage() {
           >
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               {art.type === "image" && (
-                <Image
+                <OptimizedImage
                   src={art.image}
                   alt={art.title}
-                  width={2000}
-                  height={2000}
+                  width={800}
+                  height={800}
                   className="w-full h-auto object-cover"
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               )}
             </div>
@@ -163,12 +166,14 @@ export default function ArtPage() {
             >
               <div className="relative overflow-hidden rounded-lg shadow-lg">
                 {art.type === "image" ? (
-                  <Image
+                  <OptimizedImage
                     src={art.image}
                     alt={art.title}
-                    width={2000}
-                    height={2000}
+                    width={1200}
+                    height={1200}
                     className="w-full h-auto object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 80vw"
                   />
                 ) : (
                   <video

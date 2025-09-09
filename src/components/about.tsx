@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import React from "react";
+import { OptimizedImage } from "./OptimizedImage";
 import { motion } from "framer-motion";
 
-export function About() {
+export const About = React.memo(function About() {
   return (
     <motion.section
       id="about"
@@ -47,15 +48,17 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative w-full aspect-video"
           >
-            <Image
-              src="http://arweave.net/IWJ-7Bo3fqlRwPjke2JxcoU2ToExnqY9D1O2x6C1b-s"
+            <OptimizedImage
+              src="https://defi.ao/IWJ-7Bo3fqlRwPjke2JxcoU2ToExnqY9D1O2x6C1b-s"
               alt="About Image"
               fill
               className="object-cover rounded-2xl"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             />
           </motion.div>
         </motion.div>
       </div>
     </motion.section>
   )
-}
+})
