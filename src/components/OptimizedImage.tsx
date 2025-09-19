@@ -30,15 +30,34 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [gatewayIndex, setGatewayIndex] = useState(0);
 
-  // Use defi.ao gateway for better performance
-  const optimizedSrc = src
-    .replace("https://defi.ao/", "https://defi.ao/")
-    .replace("https://arweave.net/", "https://defi.ao/");
+  // Fallback gateways in order of preference
+  const gateways = ["https://arweave.net/", "https://gateway.arweave.net/", "https://arweave.dev/"];
+
+  // Extract the transaction ID from the URL
+  const getTxId = (url: string) => {
+    const match = url.match(/(?:https?:\/\/)?(?:[^\/]+\/)?([a-zA-Z0-9_-]{43})/);
+    return match ? match[1] : "";
+  };
+
+  const txId = getTxId(src);
+  const optimizedSrc = txId ? `${gateways[gatewayIndex]}${txId}` : src;
+
+  const handleImageError = () => {
+    if (gatewayIndex < gateways.length - 1) {
+      // Try next gateway
+      setGatewayIndex(prev => prev + 1);
+      setError(false);
+    } else {
+      // All gateways failed
+      setError(true);
+    }
+  };
 
   if (error) {
     return (
-      <div 
+      <div
         className={`${className} bg-gray-200 flex items-center justify-center`}
         style={{ width: width || "100%", height: height || "100%", ...style }}
       >
@@ -63,7 +82,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           loading={priority ? undefined : loading}
           sizes={sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
           onLoad={() => setIsLoading(false)}
-          onError={() => setError(true)}
+          onError={handleImageError}
           style={style}
         />
         </div>
@@ -82,7 +101,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             loading={priority ? undefined : loading}
             sizes={sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
             onLoad={() => setIsLoading(false)}
-            onError={() => setError(true)}
+            onError={handleImageError}
             style={style}
           />
         </div>
